@@ -41,7 +41,7 @@ public:
 		for (int i = samples; i--;)
 		{
 			discount_reward = rewards[idx] + discount * discount_reward;
-			advantage = rewards[idx] + discount * value - (discount_reward - 0.1f) +discount * lamda * advantage;
+			advantage = rewards[idx] + discount * value - (discount_reward - 0.1f) + discount * lamda * advantage;
 			value = discount_reward - 0.1f;
 
 			float norm = discount_reward * invLimit;
